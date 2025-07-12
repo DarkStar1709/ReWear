@@ -9,6 +9,7 @@ import itemsRoutes from './routes/items.js';
 import swapsRoutes from './routes/swaps.js';
 import adminRoutes from './routes/admin.js';
 import usersRoutes from './routes/users.js';
+import verificationRoutes from './routes/verification.js';
 
 dotenv.config();
 
@@ -30,6 +31,7 @@ app.use('/api/items', itemsRoutes);
 app.use('/api/swaps', swapsRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/users', usersRoutes);
+app.use('/api/verification', verificationRoutes);
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

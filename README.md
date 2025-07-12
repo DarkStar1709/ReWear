@@ -6,6 +6,13 @@ ReWear is a web-based platform that enables users to exchange unused clothing th
 
 ## Features
 
+### AI-Powered Image Verification
+- Google Gemini Vision API integration
+- Automatic verification of clothing images against user descriptions
+- Prevents mismatched items (e.g., shirt photo with pants description)
+- Confidence scoring and detailed feedback
+- Batch verification for multiple images
+
 ### User Authentication
 - Email/password signup and login
 - Secure user account management
@@ -35,6 +42,33 @@ ReWear is a web-based platform that enables users to exchange unused clothing th
 - Moderate and approve/reject item listings
 - Remove inappropriate or spam items
 - Lightweight admin panel for oversight
+
+## Setup Instructions
+
+### Prerequisites
+- Node.js (v14 or higher)
+- MongoDB
+- Google Gemini API key
+
+### Environment Variables
+Create a `.env` file in the server directory with:
+```
+MONGODB_URI=mongodb://localhost:27017/rewear
+JWT_SECRET=your_jwt_secret_here
+GEMINI_API_KEY=your_gemini_api_key_here
+PORT=5000
+```
+
+### Getting Gemini API Key
+1. Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
+2. Create a new API key
+3. Add it to your `.env` file as `GEMINI_API_KEY`
+
+### Installation
+1. Install server dependencies: `cd server && npm install`
+2. Install client dependencies: `cd client && npm install`
+3. Start the server: `cd server && npm start`
+4. Start the client: `cd client && npm start`
 
 ### Team:
 - Arnav Kumar arnav170905@gmail.com
